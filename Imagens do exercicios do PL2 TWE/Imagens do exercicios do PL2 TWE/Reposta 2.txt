@@ -1,0 +1,17 @@
+5 - Tendo em atenção o Exemplo 1 e 2 da TP, descreva, justificando, os dois modos de
+efetuar a solicitação GET (solicitação direta ou formulário HTML)
+  
+No exemplo 1 a justificativa é que :
+
+   - É que tem maior rapidez e simplicidade, com o uso do curl. Onde é direto e rápido, basta fornecer a URL desejada e o curl cuida de enviar a solicitação e exibir a resposta.
+   - Controle total sobre a solicitação do curl, no qual podemos especificar diretamente os detalhes da solicitação HTTP, como cabeçalhos personalizados ou autenticação, se necessário.
+   - Facilidade de automação. Por ser uma ferramenta de linha de comando, o curl é facilmente integrado a scripts e processos automatizados.
+
+No exemplo 2 a justificativa é que : 
+
+   - Interatividade e usabilidade com os formulários HTML, que permitem uma interação direta e amigável com os utilizadores. Aonde eles podem inserir dados de maneira mais fácil e intuitiva.
+
+   - Padrão da web: O uso de formulários HTML é um padrão estabelecido na web para interações do usuário com páginas da web e servidores, no qual isso facilita a compreensão e a 			    familiaridade por parte dos usuários.
+
+   - Facilidade de integração com páginas web : Em si, os formulários HTML podem ser facilmente integrados a páginas da web existentes, permitindo que os programadores que construam interfaces interativas numa forma eficiente.
+

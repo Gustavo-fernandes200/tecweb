@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gravar Texto em Arquivo</title>
+    
+</head>
+<body>
+    <h1>Gravar Texto em Arquivo</h1>
+
+    <form action="salvar_texto.php" method="post">
+        <label for="texto">Texto a Salvar:</label>
+        <textarea id="texto" name="texto" rows="5" cols="50" placeholder="Digite o texto que deseja salvar..."></textarea>
+
+        <label for="nome_arquivo">Nome do Arquivo:</label>
+        <input type="text" id="nome_arquivo" name="nome_arquivo" placeholder="Informe o nome do arquivo...">
+
+        <input type="submit" value="Salvar Texto">
+    </form>
+</body>
+</html>

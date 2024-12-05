@@ -1,0 +1,8 @@
+O que acontece? 
+
+Aconteceu que no Http toolkit apareceu Content-Type: application/x-www-form-urlencoded
+
+
+Qual o tipo de Content-Type enviado ao servidor?
+
+Foi que eu fiz um formulario em curl, em vez de criado em si 

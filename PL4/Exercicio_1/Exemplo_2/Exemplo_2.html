@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <head>
+        <script>
+            const form = document.getElementById('myForm')
+            const outputDiv = document.createElement('div')
+
+            for (let element of form.elements) 
+            {
+                const newElement = document.createElement('p')
+                newElement.textContent = element.value
+                outputDiv.appendChild(newElement)
+            }
+            document.body.appendChild(outputDiv)
+
+            </script>
+    </head>
+    <body>
+        <form id="myForm">
+            Firstname: <input id="fname" type="text" value="Rato">
+            Lastname: <input id="lname" type="text" value="Mickey">
+            <input id="sub" type="button" value="Submit">
+        </form>
+    </body>
+
+</html>
+**"Funciona?" Não Funciona porque o script devia está depois da criação do form**

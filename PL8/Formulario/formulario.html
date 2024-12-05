@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário com Curl - Detalhado</title>
+</head>
+<body>
+    <h2>Enviar Solicitação GET com Curl</h2>
+    <form action="pagina.php" method="get">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required maxlength="50"><br>
+        <small>Digite seu nome completo (máximo de 50 caracteres).</small><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <small>Insira um endereço de e-mail válido.</small><br>
+        
+        <label for="idade">Idade:</label><br>
+        <input type="number" id="idade" name="idade" min="18" max="100" required><br>
+        <small>Digite sua idade (entre 18 e 100 anos).</small><br>
+        
+        <label for="genero">Gênero:</label><br>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="feminino" name="genero" value="feminino">
+        <label for="feminino">Feminino</label><br>
+        <small>Selecione seu gênero.</small><br>
+        
+        <label for="cidade">Cidade:</label><br>
+        <input type="text" id="cidade" name="cidade" required><br>
+        <small>Digite o nome da sua cidade.</small><br>
+        
+        <label for="comentario">Comentário:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br>
+        <small>Deixe seu comentário (opcional).</small><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

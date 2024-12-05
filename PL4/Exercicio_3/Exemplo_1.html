@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+
+        <script>
+
+            function calcularResultado() {
+              
+                var valor1 = document.getElementById("valor1").value;
+                var valor2 = document.getElementById("valor2").value;
+
+                if (valor1 === '' || valor2 === '') {
+                    alert('Por favor, insira valores em ambos os campos.');
+                    return;
+                }
+
+                var num1 = parseFloat(valor1);
+                var num2 = parseFloat(valor2);
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert('Por favor, insira números válidos.');
+                    return;
+                }
+        
+                var operacaoSelecionada = document.querySelector('input[name="operacao"]:checked').value;
+
+                var resultado;
+                switch (operacaoSelecionada) {
+                    case "soma":
+                        resultado = num1 + num2;
+                        break;
+                    case "subtracao":
+                        resultado = num1 - num2;
+                        break;
+                    case "multiplicacao":
+                        resultado = num1 * num2;
+                        break;
+                    case "divisao":
+                        if (num2 === 0) {
+                            alert('Não é possível dividir por zero.');
+                            return;
+                        }
+                        resultado = num1 / num2;
+                        break;
+                }
+
+                document.getElementById("resultado").value = resultado;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+
+        <label for="valor1">Valor 1:</label>
+        <input type="text" id="valor1"><br>
+        <label for="valor2">Valor 2:</label>
+        <input type="text" id="valor2"><br>
+
+        <label>
+            <input type="radio" name="operacao" value="soma" checked> Soma
+        </label>
+        <label>
+            <input type="radio" name="operacao" value="subtracao"> Subtração
+        </label>
+        <label>
+            <input type="radio" name="operacao" value="multiplicacao"> Multiplicação
+        </label>
+        <label>
+            <input type="radio" name="operacao" value="divisao"> Divisão
+        </label><br><br>
+
+        <button onclick="calcularResultado()">Calcular</button><br><br>
+
+
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="resultado" readonly>
+
+
+        <p id="mensagem" style="color: red; display: none;">Por favor, insira valores válidos.</p>
+    </body>
+</html>

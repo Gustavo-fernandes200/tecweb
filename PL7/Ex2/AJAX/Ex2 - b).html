@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exemplo de Formulário</title>
+        <script>
+            function loadOptions () {
+                const xhr = new XMLHttpRequest()
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        const options = xhr.responseText.split('\n')
+                        const select = document.getElementById('escaloes')
+                        options.forEach(function (option) {
+                            const optionElement = document.createElement('option')
+                            optionElement.text = option
+                            select.add(optionElement)
+                            })
+                        }
+                    }
+                    xhr.open('GET', 'http://localhost/escaloes.txt', true)
+                    xhr.send()
+                }
+        </script>
+    </head>
+
+</html>
